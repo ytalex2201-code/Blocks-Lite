@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "blocks-lite",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-27",
+
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BLOCKY_HILLS",
+        "class_name": "BlockyHillsServer"
+      }
+    ]
+  },
+
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "BlockyHillsServer"
+      ]
+    }
+  ]
+}
